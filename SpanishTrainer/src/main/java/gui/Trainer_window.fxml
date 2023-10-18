@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TrainerController">
+   <children>
+      <ToolBar prefHeight="80.0" prefWidth="886.0" style="-fx-background-color: #007291;">
+        <items>
+          <Button fx:id="addButton" alignment="CENTER" cache="true" mnemonicParsing="false" onAction="#addVocabulary" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: #f9f2db;" text="Añadir vocabulario" />
+        </items>
+      </ToolBar>
+      <Pane prefHeight="300.0" prefWidth="886.0" style="-fx-background-color: #f5da8a;">
+         <children>
+            <Label fx:id="displayLabel" alignment="CENTER" layoutX="74.0" layoutY="6.0" prefHeight="249.0" prefWidth="739.0" text="¡Pulsar empezar a jugar!" textFill="#757575">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="puntajeLabel" layoutX="12.0" layoutY="14.0" text="Puntaje:" />
+            <Label fx:id="intentosLabel" layoutX="12.0" layoutY="41.0" text="Intentos:" />
+            <Label fx:id="numeroPuntaje" layoutX="85.0" layoutY="14.0" />
+            <Label fx:id="numeroIntentos" layoutX="85.0" layoutY="41.0" />
+            <Button fx:id="resolverButton" alignment="CENTER" layoutX="840.0" layoutY="18.0" mnemonicParsing="false" onAction="#solve" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: #f9f2db; -fx-border-color: black;" text="?" />
+         </children>
+      </Pane>
+      <Pane prefHeight="325.0" prefWidth="886.0" style="-fx-background-color: f9f2db;">
+         <children>
+            <Button fx:id="borrarButton" layoutX="194.0" layoutY="200.0" mnemonicParsing="false" onAction="#deleteInput" prefHeight="49.0" prefWidth="130.0" style="-fx-background-color: f2624f; -fx-text-fill: white;" text="Borrar">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="irButton" defaultButton="true" layoutX="563.0" layoutY="200.0" mnemonicParsing="false" onAction="#acceptInput" prefHeight="49.0" prefWidth="130.0" style="-fx-background-color: #007291; -fx-text-fill: white;" text="Ir">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="textField" alignment="CENTER" layoutX="194.0" layoutY="119.0" prefHeight="49.0" prefWidth="499.0" promptText="Introduce la respuesta ...">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button fx:id="empezarButton" layoutX="378.0" layoutY="200.0" mnemonicParsing="false" onAction="#startGame" prefHeight="49.0" prefWidth="130.0" style="-fx-background-color: f9c13e; -fx-text-fill: white;" text="Empezar">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="specialChar1" alignment="CENTER" layoutX="267.0" layoutY="32.0" mnemonicParsing="false" onAction="#specialChar1pressed" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: #f9f2db; -fx-text-fill: grey; -fx-border-color: grey;" text="Á" />
+            <Button fx:id="specialChar2" alignment="CENTER" layoutX="267.0" layoutY="67.0" mnemonicParsing="false" onAction="#specialChar2pressed" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: #f9f2db; -fx-border-color: grey; -fx-text-fill: grey;" text="á" />
+            <Button fx:id="specialChar3" alignment="CENTER" layoutX="307.0" layoutY="32.0" mnemonicParsing="false" onAction="#specialChar3pressed" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: #f9f2db; -fx-border-color: grey; -fx-text-fill: grey;" text="É" />
+            <Button fx:id="specialChar4" alignment="CENTER" layoutX="307.0" layoutY="67.0" mnemonicParsing="false" onAction="#specialChar4pressed" prefHeight="25.0" prefWidth="32.0" style="-fx-background-color: #f9f2db; -fx-border-color: grey; -fx-text-fill: grey;" text="é" />
+            <Button fx:id="specialChar5" alignment="CENTER" layoutX="347.0" layoutY="32.0" mnemonicParsing="false" onAction="#specialChar5pressed" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: #f9f2db; -fx-border-color: grey; -fx-text-fill: grey;" text="Í" />
+            <Button fx:id="specialChar6" alignment="CENTER" layoutX="347.0" layoutY="67.0" mnemonicParsing="false" onAction="#specialChar6pressed" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: #f9f2db; -fx-border-color: grey; -fx-text-fill: grey;" text="í" />
+            <Button fx:id="specialChar9" alignment="CENTER" layoutX="427.0" layoutY="32.0" mnemonicParsing="false" onAction="#specialChar9pressed" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: #f9f2db; -fx-border-color: grey; -fx-text-fill: grey;" text="Ó" />
+            <Button fx:id="specialChar10" alignment="CENTER" layoutX="427.0" layoutY="67.0" mnemonicParsing="false" onAction="#specialChar10pressed" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: #f9f2db; -fx-border-color: grey; -fx-text-fill: grey;" text="ó" />
+            <Button fx:id="specialChar7" alignment="CENTER" layoutX="387.0" layoutY="32.0" mnemonicParsing="false" onAction="#specialChar7pressed" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: #f9f2db; -fx-border-color: grey; -fx-text-fill: grey;" text="Ú" />
+            <Button fx:id="specialChar8" alignment="CENTER" layoutX="387.0" layoutY="67.0" mnemonicParsing="false" onAction="#specialChar8pressed" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: #f9f2db; -fx-border-color: grey; -fx-text-fill: grey;" text="ú" />
+            <Button fx:id="specialChar11" alignment="CENTER" layoutX="467.0" layoutY="32.0" mnemonicParsing="false" onAction="#specialChar11pressed" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: #f9f2db; -fx-border-color: grey; -fx-text-fill: grey;" text="Ñ" />
+            <Button fx:id="specialChar12" alignment="CENTER" layoutX="467.0" layoutY="67.0" mnemonicParsing="false" onAction="#specialChar12pressed" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: #f9f2db; -fx-border-color: grey; -fx-text-fill: grey;" text="ñ" />
+            <Button fx:id="specialChar13" alignment="CENTER" layoutX="507.0" layoutY="32.0" mnemonicParsing="false" onAction="#specialChar13pressed" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: #f9f2db; -fx-border-color: grey; -fx-text-fill: grey;" text="Ä" />
+            <Button fx:id="specialChar15" alignment="CENTER" layoutX="547.0" layoutY="32.0" mnemonicParsing="false" onAction="#specialChar15pressed" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: #f9f2db; -fx-border-color: grey; -fx-text-fill: grey;" text="Ö" />
+            <Button fx:id="specialChar14" alignment="CENTER" layoutX="507.0" layoutY="67.0" mnemonicParsing="false" onAction="#specialChar14pressed" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: #f9f2db; -fx-border-color: grey; -fx-text-fill: grey;" text="ä" />
+            <Button fx:id="specialChar17" alignment="CENTER" layoutX="587.0" layoutY="32.0" mnemonicParsing="false" onAction="#specialChar17pressed" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: #f9f2db; -fx-border-color: grey; -fx-text-fill: grey;" text="Ü" />
+            <Button fx:id="specialChar16" alignment="CENTER" layoutX="547.0" layoutY="67.0" mnemonicParsing="false" onAction="#specialChar16pressed" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: #f9f2db; -fx-border-color: grey; -fx-text-fill: grey;" text="ö" />
+            <Button fx:id="specialChar18" alignment="CENTER" layoutX="587.0" layoutY="67.0" mnemonicParsing="false" onAction="#specialChar18pressed" prefHeight="27.0" prefWidth="32.0" style="-fx-background-color: #f9f2db; -fx-border-color: grey; -fx-text-fill: grey;" text="ü" />
+         </children>
+      </Pane>
+   </children>
+</VBox>
